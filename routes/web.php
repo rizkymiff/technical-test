@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth:web']], function() {
     Route::resource('dashboard', 'Home\DashboardController');
+
+    Route::get('logout', 'Auth\LoginController@destroy')->name('logout');
 });
 
 Route::get('auth', 'Admin\Auth\LoginController@index')->name('admin.login.index')->middleware(['guest']);
