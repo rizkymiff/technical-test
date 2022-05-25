@@ -5,7 +5,7 @@
             <a href="index.html" class="logo">
                 <!-- logo-->
                 <div class="logo-lg">
-                    <h2 style="padding-left: 2.2rem !important;">InstaApps</h2>
+                    <h2 style="padding-left: 2.2rem !important;">Technical Test</h2>
                 </div>
             </a>
         </div>
@@ -147,6 +147,4 @@
     </div>
 </header>
 
-@if (auth('web')->user()->role == 'admin')
-    @include('partials.menubar')
-@endif
+@include('partials.menubar')
