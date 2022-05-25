@@ -25,6 +25,8 @@
     <div class="content-wrapper">
         <div class="container-full">
 
+            @yield('breadcrumb')
+
             <section class="content">
                 @yield('content')
             </section>
