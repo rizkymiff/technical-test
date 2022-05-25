@@ -9,7 +9,7 @@
     <!-- Sample menu definition -->
     <ul id="main-menu" class="sm sm-blue">
         <li>
-            <a href="#">
+            <a href="{{ route('admin.dashboard.index') }}" class="active">
                 <i class="icon-Layout-4-blocks">
                     <span class="path1"></span>
                     <span class="path2"></span>
@@ -17,11 +17,11 @@
             </a>
         </li>
         <li>
-            <a href="email_index.html">
+            <a href="{{ route('admin.transaction.index') }}">
                 <i class="icon-Mail-notification">
                     <span class="path1"></span>
                     <span class="path2"></span>
-                </i>Emails
+                </i>Transaction
             </a>
         </li>
     </ul>
