@@ -11,6 +11,12 @@ use Illuminate\Http\Response;
 
 class TransactionController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authorizeResource(Transaction::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +24,12 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $data['transactions'] = Transaction::get();
+        if (auth()->user()->is_user) {
+            $data['transactions'] = Transaction::where('created_at', now())->get();
+        } else {
+            $data['transactions'] = Transaction::get();
+        }
+
         return view('transaction.index', $data);
     }
 
