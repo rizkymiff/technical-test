@@ -21,6 +21,7 @@
 @endsection
 
 @section('content')
+@if (auth()->user()->is_admin)
     <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
@@ -91,4 +92,5 @@
       </div>
       <!-- /.box -->
     </div>
+@endif
 @endsection
